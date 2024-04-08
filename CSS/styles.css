@@ -1,9 +1,50 @@
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-.roboto-condensed-<uniquifier> {
-  font-family: "Roboto Condensed", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+.status-bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 55pt;
+}
+
+.content {
+  margin: 55pt 0 56pt 0;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.content > .top-navbar {
+  width: 100%;
+  height: 50pt;
+  display: flex;
+  align-items: center;
+}
+
+.top-navbar > svg {
+  width: 24px;
+  height: 24px;
+  margin: 6pt;
+}
+
+.top-navbar > h2 {
+  margin: 0;
+  padding: 12pt 16pt;
+  font-weight: 500;
+  font-size: 16px;
+  flex: 1;
+  text-align: center;
 }

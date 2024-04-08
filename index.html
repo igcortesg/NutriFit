@@ -12,7 +12,61 @@
     <script src="js/script.js"></script>
   </head>
   <body>
-    <h1></h1>
+    <!-- Barra de navegación superior -->
+
+    <div class="content">
+      <div class="top-navbar">
+        <h2>Inicio</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+        </svg>              
+      </div>
+
+      <!-- Título "Balance Calórico" y barra separadora -->
+      <div class="container mt-3">
+          <h2>Balance Calórico</h2>
+          <hr>
+      </div>
+
+      <!-- Inputs de fecha -->
+      <div class="container">
+          <div class="mb-3">
+              <label for="fechaInicio" class="form-label">Ingrese fecha inicio</label>
+              <input type="date" class="form-control" id="fechaInicio">
+          </div>
+          <div class="mb-3">
+              <label for="fechaTermino" class="form-label">Ingrese fecha término</label>
+              <input type="date" class="form-control" id="fechaTermino">
+          </div>
+      </div>
+
+      <!-- Tabla con datos numéricos -->
+      <div class="container">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">Encabezado 1</th>
+                      <th scope="col">Encabezado 2</th>
+                      <th scope="col">Encabezado 3</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Dato 1</td>
+                      <td>Dato 2</td>
+                      <td>Dato 3</td>
+                  </tr>
+                  <!-- Añadir más filas según sea necesario -->
+              </tbody>
+          </table>
+      </div>
+
+
+    </div>  
+
+
+
+
     <!-- bootstrap + popper por si usamos algunas animaciones-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
