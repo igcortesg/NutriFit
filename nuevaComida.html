@@ -31,43 +31,33 @@
 
             <!-- Titulo "Registro de mis comidas" y barra separadora -->
             <div class="container mt-3">
-                <h2>Registro de actividad física</h2>
+                <h2>Ingreso de nueva comida</h2>
                 <hr>
             </div>
 
             <!-- Input fecha -->
             <div class="container">
-                <div class="mb-3">
-                    <label class="form-label">Seleccionar fecha</label>
-                    <input type="date" class="form-control">
+                <div class="mb-5">
+                    <label class="form-label">Seleccionar comida:</label>
+                    <select class="form-select">
+                        <option selected>Ej: arroz cocido</option>
+                        <option value="1">Pollo cocido</option>
+                        <option value="2">Pollo frito</option>
+                        <option value="3">Arroz cocido</option>
+                        <option value="4">Lechuga</option>
+                        <option value="5">Tomate</option>
+                    </select>
+                </div>
+                <div class="mb-5">
+                    <label class="form-label">Ingresar porción en gramos:</label>
+                    <input type="number" class="form-control" placeholder="Ej: 250 gramos">
                 </div>
             </div>
 
-            <!-- Tabla de alimentos -->
+            <!-- Boton Guardar alimento -->
             <div class="container">
-                <table class="table mb-5">
-                    <thead>
-                        <tr>
-                            <th scope="col">Actividad</th>
-                            <th scope="col">Minutos</th>
-                            <th scope="col">Calorías quemadas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Fútbol</td>
-                            <td>60</td>
-                            <td>400</td>
-                        </tr>
-                        <!-- Añadir más filas según sea necesario -->
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Boton Ingresar nuevo alimento -->
-            <div class="container">
-                <a href="nuevaActividad.html">
-                    <button type="button" class="btn btn-primary mx-auto d-block">Ingresar nueva actividad física</button>
+                <a href="misComidas.html">
+                <button type="button" class="btn btn-primary mx-auto d-block">Guardar comida</button>
                 </a>
             </div>
         </div>
@@ -80,13 +70,13 @@
                     <h6>Inicio</h6>
                 </a>
             </div>
-            <div class="btabbar-item">
+            <div class="btabbar-item active">
                 <a href="misComidas.html">
                     <span class="material-symbols-outlined">restaurant</span>
                     <h6>Mis comidas</h6>
                 </a>
             </div>
-            <div class="btabbar-item active">
+            <div class="btabbar-item">
                 <a href="actividadFisica.html">
                     <span class="material-symbols-outlined">directions_run</span>
                     <h6>Actividad física</h6>
