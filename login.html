@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,26 +11,195 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="script.js"></script>
   </head>
-
   <body>
-    <div class="d-flex justify-content-center"><h1>Inicio de sesión</h1></div>
-    <form class="form" id="form" action="/" method="get" >
-      <div class="d-flex justify-content-center"> 
-        <div class="d-inline-flex p2">
-          <input type="text" name = "userID" class="form-control text-start" id="userID" aria-describedby="emailHelp" placeholder="Nombre de usuario" required>
+    <div class="container my-5 vh-100"> <!-- Añadido margen superior -->
+      <div class="row align-items-center justify-content-center text-center h-100"> <!-- Alinea elementos verticalmente -->
+        <div class="col"> <!-- Añadido margen superior -->
+          <form class="form" id="loginForm" action="/" method="get">
+            <h1>Iniciar sesión</h1> 
+            <div class="form-group"> 
+              <div class="d-inline-flex p-2">
+                <input type="text" name="userID" class="form-control text-start space-bottom" id="userID" aria-describedby="emailHelp" placeholder="Nombre de usuario" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <input type="password" name="password" class="form-control text-start space-bottom" id="passinput" placeholder="Contraseña" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <button type="submit" class="btn btn-dark">Iniciar sesión</button>
+              </div>
+            </div>  
+          </form>
+          <form class="form" id="registerForm" style="display: none;" action="/" method="post">
+            <h1>Registro</h1>
+            <hr>
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <h4 id="formhelp">Email</h4>
+              </div>
+              <div class="d-inline-flex p-2">
+                <input type="email" id="email" class="form-control text-center margen" id="email" placeholder="ejemplo@correo.com" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <h5 id="formhelp">Nombre</h5>
+              </div>
+              <div class="d-inline-flex p-2">
+                <input type="text" name="nombre" class="form-control text-center" id="userName" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <h5 id="formhelp">Apellido</h5>
+              </div>
+              <div class="d-inline-flex p-2">
+                <input type="text" name="apellido" class="form-control text-center" id="userName" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <h5 id="formhelp">RUT</h5>
+              </div>
+              <div class="d-inline-flex p-2">
+                <input type="text" name="rut" class="form-control text-center" id="rut">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <h5 id="formhelp">F. de Nacimiento</h5>
+              </div>
+              <div class="d-inline-flex p-2">
+                <input type="date" name="rut" class="form-control text-center" id="birthday" placeholder="03/11/11" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <select class="form-select" id="regionSelect">
+                <option value="">Selecciona una región</option>
+              </select>
+            </div>
+            <div class="col">
+              <h5>Comuna</h5>
+              <select class="form-select" id="comunaSelect">
+                <option value="">Selecciona una comuna</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <h5 id="formhelp">Peso (Kg.)</h5>
+              </div>
+              <div class="d-inline-flex p-2">
+                <input type="number" name="apellido" class="form-control text-center" id="userName" min="30">
+                
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <h5 id="formhelp">Estatura (cm)</h5>
+              </div>
+              <div class="d-inline-flex p-2">
+                <input type="number" name="estatura" class="form-control text-center" id="userName" min="100" required>
+                
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <h5 id="formhelp">Contraseña</h5>
+              </div>
+              <div class="d-inline-flex p-2">
+                <input type="password" name="password" class="form-control text-center" id="password" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <h5 id="formhelp">Confirma Contraseña</h5>
+              </div>
+              <div class="d-inline-flex p-2">
+                <input type="password" name="password" class="form-control text-center" id="password" required>
+              </div>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input align-items-center" id="terminosycond" required>
+              <label class="form-check-label align-items-center" for="terminosycond">Acepta terminos y condiciones.</label>
+            </div>
+            <div class="form-group">
+              <div class="d-inline-flex p-2">
+                <button type="submit" class="btn btn-dark">Registrarse</button>
+              </div>
+            </div>  
+          </form>
+        </div>
+        <div class="col my-5"> <!-- Añadido margen superior -->
+          <h1>¿No tienes cuenta?</h1>
+          <br>
+          <button id="registerButton" class="btn btn-dark">Regístrate</button>
         </div>
       </div>
-      <div class="form-group d-flex justify-content-center">
-        <div class="d-inline-flex p2">
-          <input type="password" name="password" class="form-control text-start " id="exampleInputPassword1" placeholder="Contraseña" required>
-        </div>
-      </div>
-      <div class="col text-center">
-      <button type="submit" class="btn btn-dark ">Iniciar sesión</button>
     </div>
-    </form>
+    <!--Formulario registro-->
+  
+     
+    
     <!-- bootstrap + popper por si usamos algunas animaciones-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    // Capturamos el botón "Regístrate"
+    const registerButton = document.querySelector('#registerButton');
+    // Capturamos los formularios de login y registro
+    const loginForm = document.querySelector('#loginForm');
+    const registerForm = document.querySelector('#registerForm');
+  
+    // Añadimos un event listener al botón "Regístrate"
+    registerButton.addEventListener('click', function() {
+      // Ocultamos el formulario de login
+      loginForm.style.display = 'none';
+      // Mostramos el formulario de registro
+      registerForm.style.display = 'block';
+    });
+  });
+    </script>
+    <!--Script regiones+comunas-->
+    <script>
+      // Cargar datos del archivo JSON
+      fetch('comunas-regiones.json')
+        .then(response => response.json())
+        .then(data => {
+          const regionSelect = document.getElementById('regionSelect');
+          const comunaSelect = document.getElementById('comunaSelect');
+    
+          // Llenar selector de regiones
+          data.regiones.forEach(region => {
+            const option = document.createElement('option');
+            option.value = region.nombre;
+            option.textContent = region.nombre;
+            regionSelect.appendChild(option);
+          });
+    
+          // Evento cuando se selecciona una región
+          regionSelect.addEventListener('change', () => {
+            // Limpiar select de comunas
+            comunaSelect.innerHTML = '<option value="">Selecciona una comuna</option>';
+            
+            // Obtener comunas de la región seleccionada
+            const selectedRegion = data.regiones.find(region => region.nombre === regionSelect.value);
+            if (selectedRegion) {
+              selectedRegion.comunas.forEach(comuna => {
+                const option = document.createElement('option');
+                option.value = comuna;
+                option.textContent = comuna;
+                comunaSelect.appendChild(option);
+              });
+            }
+          });
+        })
+        .catch(error => console.error('Error al cargar el archivo JSON:', error));
+    </script>
+    
   </body>
 </html>
