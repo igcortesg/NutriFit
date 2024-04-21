@@ -26,39 +26,61 @@
             
             <!-- Barra de navegacion superior -->
             <div class="top-navbar">
-                <h2>Mis comidas</h2>
+                <h2>Mi perfil</h2>
             </div>
 
-            <!-- Titulo "Registro de mis comidas" y barra separadora -->
+            <!-- Titulo y barra separadora -->
             <div class="container mt-3">
-                <h2>Ingreso de nueva comida</h2>
+                <h2>Información personal</h2>
                 <hr>
             </div>
 
-            <!-- Input fecha -->
+            <!-- Tabla de informacion -->
             <div class="container">
-                <div class="mb-5">
-                    <label class="form-label">Seleccionar comida:</label>
-                    <select class="form-select">
-                        <option value="" selected>Selecciona una opción</option>
-                        <option value="1">Pollo cocido</option>
-                        <option value="2">Pollo frito</option>
-                        <option value="3">Arroz cocido</option>
-                        <option value="4">Lechuga</option>
-                        <option value="5">Tomate</option>
-                    </select>
-                </div>
-                <div class="mb-5">
-                    <label class="form-label">Ingresar porción en gramos:</label>
-                    <input type="number" class="form-control" placeholder="Ej: 250 gramos">
-                </div>
+                <table class="table mb-5">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="material-symbols-outlined">height</span>
+                            </td>
+                            <td>Altura</td>
+                            <td>1,75 m</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="material-symbols-outlined">monitor_weight</span>
+                            </td>
+                            <td>Peso</td>
+                            <td>75 kg</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="material-symbols-outlined">ecg</span>
+                            </td>
+                            <td>IMC</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="material-symbols-outlined">groups_2</span>
+                            </td>
+                            <td>Edad</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="material-symbols-outlined">ecg_heart</span>
+                            </td>
+                            <td>Estado</td>
+                            <td>Saludable</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <!-- Boton Guardar alimento -->
-            <div class="container">
-                <a href="misComidas.html">
-                <button type="button" class="btn btn-primary mx-auto d-block">Guardar comida</button>
-                </a>
+            <!-- Boton Ajustes de cuenta -->
+            <div class="container mb-3">
+                <button type="button" class="btn btn-primary mx-auto d-block">Ajustes de cuenta</button>
             </div>
         </div>
         
@@ -70,7 +92,7 @@
                     <h6>Inicio</h6>
                 </a>
             </div>
-            <div class="btabbar-item active">
+            <div class="btabbar-item">
                 <a href="misComidas.html">
                     <span class="material-symbols-outlined">restaurant</span>
                     <h6>Mis comidas</h6>
@@ -82,8 +104,8 @@
                     <h6>Actividad física</h6>
                 </a>
             </div>
-            <div class="btabbar-item">
-                <a href="miPerfil.html">
+            <div class="btabbar-item active">
+                <a href="index.html">
                     <span class="material-symbols-outlined">person</span>              
                     <h6>Mi perfil</h6>
                 </a>
