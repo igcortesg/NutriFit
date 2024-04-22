@@ -7,8 +7,7 @@
 </div>
 
 ## Descripción
-
-El proyecto de ayudantía se basa en el desarrollo de una aplicación móvil basada en el concepto de reseñas de series, películas, anime u obras de teatro. La aplicación se basa en la interacción con el usuario, permitiendole a este mirar reseñas de otros usuarios, y publicar sus propias reseñas.
+El proyecto de NutriFit se basa en desarrollar una aplicación móvil que ayude a los usuarios a realizar un seguimiento a las comidas que consumen y a las actividades físicas realizadas, permitiendo una visualización clara de las calorías consumidas y gastadas diaramente. La aplicación facilita la visualización de tendencias relacionadas con el peso, datos personales y el balance calórico diario según la información que ingresa el usuario.
 
 ## Funcionalidades
 ### 1. Registro de Alimentos Consumidos:
