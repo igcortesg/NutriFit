@@ -50,9 +50,15 @@ El proyecto contiene los siguientes archivos:
 - misComidas.html: Página HTML para el visualizar el registro de comidas.
 - nuevaComida.html: Página HTML para agregar nuevas comidas.
 - miPerfil.html: Página HTML que muestra el perfil del usuario.
-- login.html: Página HTML para el inicio de sesión de usuario con validación de formulario.
+- login.html: Página HTML para el inicio de sesión y registro de usuario con validación de formulario.
 - script.js: Archivo JavaScript que proporciona la funcionalidad y la lógica de la aplicación.
+- styles.css: Archivo CSS que proprociona los estilos utilizados en la aplicación.
 
+## Integrantes
+
+- Ignacio Cortés González
+- Eduardo Marin Avalos
+- Fernando Melillán Torrecilla
 
 [js-badge-sm]: https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat
 [js-web]: https://developer.mozilla.org/es/docs/Web/JavaScript
