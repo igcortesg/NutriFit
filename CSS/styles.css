@@ -61,6 +61,8 @@ body {
   align-items: start;
   justify-content: space-between;
   padding: 0 20px;
+  /*border*/
+  
 }
 
 .btabbar-item {
@@ -98,4 +100,20 @@ a {
   'wght' 400,
   'GRAD' 0,
   'opsz' 48
+}
+
+.space-bottom{
+  margin-bottom: 20px;
+}
+
+.container{
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#formhelp{
+  margin-right: 10px;
+  margin-left: 5px;
 }
