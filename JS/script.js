@@ -10,34 +10,50 @@ const acepterminos = document.getElementById('acepterminos')
 
 
 
+
 form.addEventListener('submit', (e)=>{
-
-    let messages = [ ]
     
-    if(password.ariaValueMax.length<6){
-        messages.push('La contraseña debe ser mas larga') 
+    
+  e.preventDefault()
+ 
 
-    }
+  // Validar el largo de la contraseña
+  if(password.value.length<6){
+      alert('La contraseña debe ser mas larga')
+      
+  }
+  // Confirmacion de contraseña
+  if(password !== password2){
 
-    if(rut.ariaValueMax.length < 13){
+      alert('Las constraseñas no son iguales')
 
-        messages.push('Rut Invalido')
-    }
+  }
 
-    if(acepterminos != true){
+  // validar el rut 
+  if(rut.value.length< 10){
 
-        messages.push('Aceptar Terminos y Condiciones')
-    }
+     alert('Rut Invalido ingresar en el formato xxxxxxxx-x')
+     
+  }
+
+  // aceptar terminos y condiciones
+  if(acepterminos != true){
+
+      alert('Debe Aceptar Terminos y Condiciones')
+      
+  }
+
+  //validar el correo se ingrese de manera correcta
+  if(emailRegex.test(email.value)){
+
+      alert('Correo invalido')
+     
+  }
 
 
-
-    if(messages.length>0){
-        e.preventDefault()
-        errorElement.innerText = messages.join(',  ')  
-    }
+  
 
 })
-
 function validaDV(rut) {
     // Se separa el número del dígito verificador
     const [numero, dv] = rut.replace("-K", "-k").split("-");
