@@ -9,6 +9,8 @@
 ## Descripción
 El proyecto de NutriFit se basa en desarrollar una aplicación móvil que ayude a los usuarios a realizar un seguimiento a las comidas que consumen y a las actividades físicas realizadas, permitiendo una visualización clara de las calorías consumidas y gastadas diaramente. La aplicación facilita la visualización de tendencias relacionadas con el peso, datos personales y el balance calórico diario según la información que ingresa el usuario.
 
+**Link del proyecto:** https://github.com/igcortesg/NutriFit
+
 ## Funcionalidades
 ### 1. Registro de Alimentos Consumidos:
 - Esta funcionalidad permite a los usuarios visualizar los alimentos que consumen a lo largo del día.
