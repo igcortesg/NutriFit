@@ -56,7 +56,7 @@ El proyecto contiene los siguientes archivos:
 - script.js: Archivo JavaScript que proporciona la funcionalidad y la lógica de la aplicación.
 - styles.css: Archivo CSS que proprociona los estilos utilizados en la aplicación.
 
-## Entrega avance 2.3 y 2.4
+## Estructura de la Base de Datos
 
 En el desarrollo de nuestra aplicación de nutrición, hemos decidido optar por una base de datos NoSQL debido a varias razones que se alinean con nuestros objetivos y requisitos técnicos. A continuación, detallamos los motivos de esta elección:
 1. Flexibilidad de Esquema :
@@ -86,6 +86,38 @@ Actividad: En esta colección se almacenarán toda la información sobre las act
 Comidas: Cada usuario tiene la capacidad para registrar todas sus comidas. Para gestionar esta información, utilizaremos una colección dedicada a las comidas, esta colección contendrá el id del usuario, las calorías totales y las proteínas totales.
 
 ![umlf](https://github.com/igcortesg/NutriFit/assets/56361998/96070704-d688-4d85-9fc6-972396118aaf)
+
+
+## Patrones de diseño
+En el desarrollo de nuestra aplicación hemos implementado diversos patrones de diseño móvil para mejorar la experiencia del usuario y la usabilidad de la aplicación. Los patrones de diseño seleccionados permiten una navegación intuitiva y una interacción eficiente con la aplicación. A continuación, se detallan los patrones de diseño aplicados: el patrón de lectura en "F" y "Bottom Navigation". Se explicará cómo fueron integrados en las distintas pantallas de la aplicación y cómo contribuyen a la funcionalidad general
+
+### Patrón de Lectura en F
+El patrón de lectura en "F" es un diseño que guía al usuario a través del contenido de una manera lógica y natural. Este patrón se ha aplicado en las pantallas de "Registro de Comidas" y "Registro de Actividad Física". A continuación, se detalla cómo se ha implementado este patrón en cada una de estas pantallas.
+#### Registro de comidas: 
+- La pantalla comienza con el título "Registro de Comidas" en la parte superior, lo que proporciona al usuario un contexto claro sobre la función de la página.
+- Directamente debajo del título, se presenta un calendario que permite al usuario seleccionar la fecha para la cual desea registrar la comida ingerida.
+- Luego del calendario, se encuentra un campo para que el usuario elija el alimento que ha consumido.
+- A continuación, se dispone de un campo de entrada donde el usuario puede ingresar la cantidad en gramos del alimento seleccionado.
+- Finalmente, en la parte inferior, se encuentra un botón que permite al usuario agregar el registro de la comida.
+
+#### Registro de Actividad Física
+- Similarmente, esta pantalla comienza con el título "Registro de Actividad Física".
+- Debajo del título, se encuentra un calendario para seleccionar la fecha de la actividad realizada.
+- Luego del calendario, se presenta un campo para que el usuario elija el tipo de actividad física realizada.
+- A continuación, se dispone de un campo de entrada donde el usuario puede ingresar la duración de la actividad en minutos.
+- En la parte inferior, se encuentra un botón para agregar el registro de la actividad física.
+
+### Bottom Navigation
+El patrón "Bottom Navigation", es una barra de navegación ubicada en la parte inferior de la pantalla. Esta barra contiene iconos que permiten al usuario moverse rápidamente entre las principales secciones de la aplicación. En nuestra aplicación, hemos implementado cuatro botones en esta barra: Inicio, Mis Comidas, Actividad Física y Mi Perfil.
+
+- Inicio: El primer botón lleva al usuario a la pantalla principal de la aplicación, donde puede ver un resumen de sus registros y estadísticas.
+- Mis Comidas: El segundo botón redirige a la pantalla de "Registro de Comidas", permitiendo al usuario agregar y revisar los registros de alimentos consumidos.
+- Actividad Física: El tercer botón lleva a la pantalla de "Registro de Actividad Física", donde el usuario puede registrar y revisar sus actividades físicas.
+- Mi Perfil: El cuarto botón dirige a la pantalla del perfil del usuario, donde se pueden gestionar configuraciones personales y estadísticas personales.
+
+
+
+
 
 ## Integrantes
 
