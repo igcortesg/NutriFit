@@ -59,19 +59,19 @@ El proyecto contiene los siguientes archivos:
 ## Entrega avance 2.3 y 2.4
 
 En el desarrollo de nuestra aplicación de nutrición, hemos decidido optar por una base de datos NoSQL debido a varias razones que se alinean con nuestros objetivos y requisitos técnicos. A continuación, detallamos los motivos de esta elección:
-1. Flexibilidad de Esquema
+1. Flexibilidad de Esquema :
 La aplicación de nutrición maneja una variedad de datos que incluyen usuarios, recetas, ingredientes, planes de dieta y más. Estos datos pueden tener estructuras que evolucionan con el tiempo. Las bases de datos NoSQL, como MongoDB, permiten la flexibilidad necesaria para modificar el esquema de datos sin interrumpir el servicio. Esta característica es crucial cuando se espera que el modelo de datos cambie con frecuencia debido a la incorporación de nuevas características y ajustes basados en el feedback del usuario.
-2. Datos en Formato JSON
+2. Datos en Formato JSON :
 El uso de JSON como formato de datos es una práctica común en las aplicaciones web modernas debido a su simplicidad y compatibilidad con JavaScript y otros lenguajes de programación. Las bases de datos NoSQL, especialmente las basadas en documentos como MongoDB, almacenan los datos en formato JSON o BSON (una versión binaria de JSON). Esto facilita la integración directa con nuestro frontend desarrollado en Angular, que también maneja datos en formato JSON. La consistencia en el formato de datos simplifica el desarrollo y reduce la necesidad de transformación de datos.
-3. Escalabilidad Horizontal
+3. Escalabilidad Horizontal :
 A medida que nuestra base de usuarios crezca, necesitaremos una solución que pueda escalar eficientemente. Las bases de datos NoSQL están diseñadas para escalar horizontalmente, distribuyendo la carga de trabajo entre múltiples servidores. Esto es particularmente útil para manejar grandes volúmenes de datos y altas tasas de transacciones, garantizando que nuestra aplicación mantenga un rendimiento óptimo incluso durante picos de uso.
-4. Rendimiento y Disponibilidad
+4. Rendimiento y Disponibilidad :
 Las bases de datos NoSQL están optimizadas para operaciones de lectura y escritura rápidas, lo que es esencial para proporcionar una experiencia de usuario fluida. Además, estas bases de datos suelen ofrecer alta disponibilidad y tolerancia a fallos mediante la replicación de datos en varios nodos. Esto asegura que la aplicación sea resistente y minimiza el tiempo de inactividad en caso de fallos del sistema.
-5. Modelado de Datos Flexibles
+5. Modelado de Datos Flexibles :
 En nuestra aplicación, los datos de planes de dieta pueden tener una estructura variable. Por ejemplo, un plan de dieta puede contener una lista de comidas que varía en tamaño y complejidad. Las bases de datos NoSQL permiten almacenar estos datos de forma flexible sin la rigidez de un esquema predefinido. Esto permite a los desarrolladores adaptarse rápidamente a nuevos requisitos sin la necesidad de realizar costosas migraciones de esquema.
-6. Eficiencia en el Desarrollo
+6. Eficiencia en el Desarrollo :
 El desarrollo ágil es un objetivo clave para nuestro equipo. Las bases de datos NoSQL permiten a los desarrolladores trabajar con modelos de datos más intuitivos y naturales, como documentos JSON, lo que reduce la complejidad y acelera el desarrollo. Además, muchas bases de datos NoSQL proporcionan APIs amigables y herramientas que facilitan la gestión y consulta de datos.
-8. Manejo de Datos Semiestructurados
+7. Manejo de Datos Semiestructurados :
 La aplicación necesita manejar datos semiestructurados y anidados, como los ingredientes de una receta o los pasos detallados para su preparación. Las bases de datos NoSQL son ideales para este tipo de datos, permitiendo anidación y estructuras complejas dentro de un solo documento. Esto contrasta con las bases de datos relacionales que requieren múltiples tablas y uniones para lograr lo mismo, lo que puede ser menos eficiente y más complejo de manejar.
 
 Descripción de nuestra base de datos
