@@ -77,6 +77,8 @@ La aplicación necesita manejar datos semiestructurados y anidados, como los ing
 Descripción de nuestra base de datos
 
 Para nuestra de base noSQL utilizaremos colecciones y documentos los cuales los separemos de esta forma:
+
+
 miPerfil: En nuestra aplicación cada usuario contiene un perfil con toda su información personal más relevante. Contendrá el id del usuario con su respectiva contraseña, también contiene el rut, peso corporal, altura, correo electrónico y lugar donde reside(Comuna y Región). 
 
 Actividad: En esta colección se almacenarán toda la información sobre las actividades que el usuario debe realizar, como lo son todos los ejercicios físicos. En esta colección se encontrará el id de la actividad, el id del usuario, las actividad con su respectiva duración,y también las calorías totales que se deberían quemar por todas cada actividad.
