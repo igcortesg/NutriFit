@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Actividad física</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Titulo "Ingreso de nueva actividad" y barra separadora -->
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <h2>Ingreso de nueva actividad</h2>
+        <ion-item-divider></ion-item-divider>
+      </ion-col>
+    </ion-row>
+
+    <!-- Input fecha -->
+    <div class="container">
+      <ion-item>
+        <ion-label>Seleccionar fecha de consumo:</ion-label>
+        <ion-datetime display-format="DD-MM-YYYY" picker-format="DD-MM-YYYY"></ion-datetime>
+      </ion-item>
+    </div>
+
+    <!-- Input actividad física -->
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Seleccionar actividad física:</ion-label>
+          <ion-select placeholder="Selecciona una opción">
+            <ion-select-option value="trote">Trote</ion-select-option>
+            <ion-select-option value="caminata">Caminata</ion-select-option>
+            <ion-select-option value="futbol">Fútbol</ion-select-option>
+            <ion-select-option value="natacion">Natación</ion-select-option>
+            <ion-select-option value="atletismo">Atletismo</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Input tiempo de la actividad -->
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Ingresar tiempo de la actividad:</ion-label>
+          <ion-input type="number" placeholder="Ej: 90 minutos"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    
+    <!-- Botón Guardar actividad física -->
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="dark" routerLink="/tabs/actividad-fisica">Guardar actividad física</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+

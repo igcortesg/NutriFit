@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Actividad física</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Barra de estado -->
+  <div class="status-bar"></div>
+
+  <div class="content">
+
+    <!-- Titulo "Registro de actividad física" y barra separadora -->
+    <div class="container mt-3">
+      <h2>Registro de actividad física</h2>
+      <ion-item-divider></ion-item-divider>
+    </div>
+
+    <!-- Input fecha -->
+    <div class="container">
+      <ion-item>
+        <ion-label>Seleccionar fecha</ion-label>
+        <ion-datetime display-format="DD-MM-YYYY" picker-format="DD-MM-YYYY"></ion-datetime>
+      </ion-item>
+    </div>
+
+    <!-- Tabla de actividades -->
+    <div class="container">
+      <ion-grid class="styled-table">
+        <ion-row>
+          <ion-col>Actividad</ion-col>
+          <ion-col>Minutos</ion-col>
+          <ion-col>Calorías quemadas</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Fútbol</ion-col>
+          <ion-col>60</ion-col>
+          <ion-col>400</ion-col>
+        </ion-row>
+        <!-- Añadir más filas según sea necesario -->
+      </ion-grid>
+    </div>
+
+    <!-- Boton Ingresar nueva actividad física -->
+    <div class="container">
+      <ion-button expand="full" href="/tabs/nueva-actividad" color="dark">Ingresar nueva actividad física</ion-button>
+    </div>
+  </div>
+
+
+</ion-content>
+
+
