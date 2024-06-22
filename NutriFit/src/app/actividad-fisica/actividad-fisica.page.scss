@@ -1,0 +1,36 @@
+.content {
+    .container {
+      margin-top: 20px; /* Ajusta el margen según sea necesario */
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .styled-table ion-grid {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      }
+      
+      .styled-table ion-row {
+        background-color: #f3f3f3;
+        color: #333;
+        border-bottom: 1px solid #dddddd;
+      }
+      
+      .styled-table ion-row:nth-of-type(even) {
+        background-color: #f9f9f9;
+      }
+      
+      .styled-table ion-col {
+        padding: 12px 15px;
+        text-align: center;
+      }
+
+    .custom-button {
+      margin-top: 20px; /* Ajusta el margen superior del botón */
+    }
+  }

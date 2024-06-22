@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Mis comidas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Barra de estado -->
+  <div class="status-bar"></div>
+
+  <div class="content">
+    <!-- Titulo "Registro de mis comidas" y barra separadora -->
+    <div class="container mt-3">
+      <h2>Registro de mis comidas</h2>
+      <ion-item-divider></ion-item-divider>
+    </div>
+
+    <!-- Input fecha -->
+    <div class="container">
+      <ion-item>
+        <ion-label>Seleccionar fecha</ion-label>
+        <ion-datetime display-format="DD-MM-YYYY" picker-format="DD-MM-YYYY"></ion-datetime>
+      </ion-item>
+    </div>
+
+    <!-- Tabla de alimentos -->
+    <div class="container">
+      <ion-grid class="styled-table">
+        <ion-row>
+          <ion-col>Comida</ion-col>
+          <ion-col>Porción en gramos</ion-col>
+          <ion-col>Calorías</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Pollo cocido</ion-col>
+          <ion-col>250</ion-col>
+          <ion-col>800</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Pollo cocido</ion-col>
+          <ion-col>250</ion-col>
+          <ion-col>800</ion-col>
+        </ion-row>
+        <!-- Añadir más filas según sea necesario -->
+      </ion-grid>
+    </div>
+
+    <!-- Boton Ingresar nueva comida -->
+    <div class="container">
+      <ion-button expand="full" href="/tabs/nueva-comida" color="dark">Ingresar nueva comida</ion-button>
+    </div>
+  </div>
+  
+</ion-content>
+
+

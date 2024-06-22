@@ -1,0 +1,7 @@
+{
+  "name": "NutriFit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

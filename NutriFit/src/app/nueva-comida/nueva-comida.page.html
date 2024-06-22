@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Mis comidas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Titulo "Ingreso de nueva comida" y barra separadora -->
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <h2>Ingreso de nueva comida</h2>
+        <ion-item-divider></ion-item-divider>
+      </ion-col>
+    </ion-row>
+
+    <!-- Input fecha -->
+    <div class="container">
+      <ion-item>
+        <ion-label>Seleccionar fecha de consumo:</ion-label>
+        <ion-datetime display-format="DD-MM-YYYY" picker-format="DD-MM-YYYY"></ion-datetime>
+      </ion-item>
+    </div>
+    
+    <!-- Input comida -->
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Seleccionar comida:</ion-label>
+          <ion-select placeholder="Selecciona una opción">
+            <ion-select-option value="pollo-cocido">Pollo cocido</ion-select-option>
+            <ion-select-option value="pollo-frito">Pollo frito</ion-select-option>
+            <ion-select-option value="arroz-cocido">Arroz cocido</ion-select-option>
+            <ion-select-option value="lechuga">Lechuga</ion-select-option>
+            <ion-select-option value="tomate">Tomate</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Input porción en gramos -->
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Ingresar porción en gramos:</ion-label>
+          <ion-input type="number" placeholder="Ej: 250 gramos"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    
+    <!-- Botón Guardar comida -->
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="dark" routerLink="/tabs/mis-comidas">Guardar comida</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

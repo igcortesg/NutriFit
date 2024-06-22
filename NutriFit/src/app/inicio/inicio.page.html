@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Barra de estado -->
+  <div class="status-bar"></div>
+
+  <div class="content">
+
+    <!-- Título "Balance Calórico" centrado y barra separadora -->
+    <div class="container mt-3">
+      <h2 class="text-center">Balance Calórico</h2>
+      <ion-item-divider></ion-item-divider>
+    </div>
+
+    <!-- Inputs de fecha -->
+    <div class="container">
+      <ion-item>
+        <ion-label>Ingrese fecha inicio</ion-label>
+        <ion-datetime display-format="DD-MM-YYYY" picker-format="DD-MM-YYYY" id="fechaInicio"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ingrese fecha término</ion-label>
+        <ion-datetime display-format="DD-MM-YYYY" picker-format="DD-MM-YYYY" id="fechaTermino"></ion-datetime>
+      </ion-item>
+    </div>
+
+    <div class="container mt-3">
+      <p class="text-center">Tu progreso</p>
+    </div>
+    
+    <!-- Tabla balance calorico -->
+    <div class="container">
+      <ion-grid class="styled-table">
+        <ion-row>
+          <ion-col>Fecha</ion-col>
+          <ion-col>GCT</ion-col>
+          <ion-col>CC</ion-col>
+          <ion-col>BC</ion-col>
+          <ion-col>Estado</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>18-03-24</ion-col>
+          <ion-col>2100</ion-col>
+          <ion-col>2000</ion-col>
+          <ion-col>-100</ion-col>
+          <ion-col>
+            <ion-icon name="trending-down-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>19-03-24</ion-col>
+          <ion-col>1800</ion-col>
+          <ion-col>2100</ion-col>
+          <ion-col>300</ion-col>
+          <ion-col>
+            <ion-icon name="trending-up-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>20-03-24</ion-col>
+          <ion-col>2200</ion-col>
+          <ion-col>2000</ion-col>
+          <ion-col>-200</ion-col>
+          <ion-col>
+            <ion-icon name="trending-down-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>21-03-24</ion-col>
+          <ion-col>2000</ion-col>
+          <ion-col>2100</ion-col>
+          <ion-col>100</ion-col>
+          <ion-col>
+            <ion-icon name="trending-up-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>22-03-24</ion-col>
+          <ion-col>1900</ion-col>
+          <ion-col>2000</ion-col>
+          <ion-col>100</ion-col>
+          <ion-col>
+            <ion-icon name="trending-up-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <!-- Texto explicativo -->
+    <div class="container mt-3 explanatory-text">
+      <p>
+        <strong>GCT: </strong>gasto calórico total diario<br>
+        <strong>CC: </strong>calorías consumidas en el día<br> 
+        <strong>BC: </strong>balance calórico diario
+      </p>
+    </div>
+  </div>
+</ion-content>
