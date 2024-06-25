@@ -10,7 +10,13 @@
 El proyecto de NutriFit se basa en desarrollar una aplicación móvil que ayude a los usuarios a realizar un seguimiento a las comidas que consumen y a las actividades físicas realizadas, permitiendo una visualización clara de las calorías consumidas y gastadas diaramente. La aplicación facilita la visualización de tendencias relacionadas con el peso, datos personales y el balance calórico diario según la información que ingresa el usuario.
 
 **Link del proyecto:** https://github.com/igcortesg/NutriFit
-
+## Instrucciones de ejecución
+- Ingresar a la rama llamada "ionic"
+- Una vez abierto, ejecutar el cluster de MongoDB usando el siguiente string de conexión: mongodb+srv://igcortes8:8x5Sp7yuKP07LFrd@cluster0.wkyspx9.mongodb.net/NutriFit?retryWrites=true&w=majority
+- En el terminal, abrir command prompt y desde la carpeta raíz acceder a la carpeta "backend", luego acceder a la carpeta "src" y ejectutar: node server.js
+- Para ejecutar el FrontEnd, en el terminal, abrir command prompt y desde la carpeta raíz acceder a la carpeta "NutriFit" y ejecutar: ionic serve
+- Correo de prueba: ejemplo@ejemplo.com
+- Contraseña de prueba: ejemplo
 ## Funcionalidades
 ### 1. Registro de Alimentos Consumidos:
 - Esta funcionalidad permite a los usuarios visualizar los alimentos que consumen a lo largo del día.
