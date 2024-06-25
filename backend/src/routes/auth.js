@@ -72,4 +72,21 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// Ruta para obtener los datos del usuario autenticado
+router.get('/me', async (req, res) => {
+    try {
+      const token = req.headers.authorization.split(' ')[1];
+      const decoded = jwt.verify(token, 'tuSecretoJWT');
+      const user = await User.findById(decoded.user.id).select('-contrasena');
+      
+      if (!user) {
+        return res.status(404).json({ message: 'Usuario no encontrado' });
+      }
+      
+      res.json(user);
+    } catch (error) {
+      res.status(500).json({ message: 'Error en el servidor', error });
+    }
+  });
+
 module.exports = router;

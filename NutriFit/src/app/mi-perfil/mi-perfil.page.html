@@ -24,35 +24,35 @@
             <ion-icon name="resize-outline"></ion-icon>
           </ion-col>
           <ion-col>Altura</ion-col>
-          <ion-col>1,75 m</ion-col>
+          <ion-col>{{ user.altura }} cm</ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <ion-icon name="barbell-outline"></ion-icon>
           </ion-col>
           <ion-col>Peso</ion-col>
-          <ion-col>75 kg</ion-col>
+          <ion-col>{{ user.peso }} kg</ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <ion-icon name="fitness-outline"></ion-icon>
           </ion-col>
           <ion-col>IMC</ion-col>
-          <ion-col>21</ion-col>
+          <ion-col>{{ user.imc }}</ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <ion-icon name="people-outline"></ion-icon>
           </ion-col>
           <ion-col>Edad</ion-col>
-          <ion-col>25</ion-col>
+          <ion-col>{{ calculateAge(user.fechaNacimiento) }} años</ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <ion-icon name="heart-outline"></ion-icon>
           </ion-col>
           <ion-col>Estado</ion-col>
-          <ion-col>Saludable</ion-col>
+          <ion-col>{{ user.estado }}</ion-col>
         </ion-row>
       </ion-grid>
     </div>
@@ -64,4 +64,3 @@
   </div>
 
 </ion-content>
-
