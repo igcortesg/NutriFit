@@ -28,11 +28,7 @@
         <ion-item>
           <ion-label>Seleccionar actividad física:</ion-label>
           <ion-select placeholder="Selecciona una opción">
-            <ion-select-option value="trote">Trote</ion-select-option>
-            <ion-select-option value="caminata">Caminata</ion-select-option>
-            <ion-select-option value="futbol">Fútbol</ion-select-option>
-            <ion-select-option value="natacion">Natación</ion-select-option>
-            <ion-select-option value="atletismo">Atletismo</ion-select-option>
+            <ion-select-option *ngFor="let actividad of actividades" [value]="actividad.nombre">{{ actividad.nombre }}</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-col>
@@ -43,7 +39,7 @@
       <ion-col>
         <ion-item>
           <ion-label>Ingresar tiempo de la actividad:</ion-label>
-          <ion-input type="number" placeholder="Ej: 90 minutos"></ion-input>
+          <ion-input class="gramos" type="number" placeholder="Ej: 90 minutos"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>

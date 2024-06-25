@@ -28,11 +28,7 @@
         <ion-item>
           <ion-label>Seleccionar comida:</ion-label>
           <ion-select placeholder="Selecciona una opción">
-            <ion-select-option value="pollo-cocido">Pollo cocido</ion-select-option>
-            <ion-select-option value="pollo-frito">Pollo frito</ion-select-option>
-            <ion-select-option value="arroz-cocido">Arroz cocido</ion-select-option>
-            <ion-select-option value="lechuga">Lechuga</ion-select-option>
-            <ion-select-option value="tomate">Tomate</ion-select-option>
+            <ion-select-option *ngFor="let comida of comidas" [value]="comida.nombre">{{ comida.nombre }}</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-col>
@@ -43,7 +39,7 @@
       <ion-col>
         <ion-item>
           <ion-label>Ingresar porción en gramos:</ion-label>
-          <ion-input type="number" placeholder="Ej: 250 gramos"></ion-input>
+          <ion-input class="gramos" type="number" placeholder="Ej: 250 gramos"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
