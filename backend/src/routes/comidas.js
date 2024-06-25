@@ -12,6 +12,8 @@ router.get('/', async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+
+module.exports = router;
 /*
 // Agregar una nueva comida
 router.post('/', async (req, res) => {
@@ -44,4 +46,4 @@ router.delete('/:id', async (req, res) => {
 });
 */
 
-module.exports = router;
+

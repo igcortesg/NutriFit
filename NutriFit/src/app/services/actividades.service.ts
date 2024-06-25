@@ -15,4 +15,5 @@ export class ActividadesService {
   }
 
   // Agrega métodos adicionales según sea necesario, como agregar, eliminar, actualizar actividades
+  
 }

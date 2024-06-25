@@ -32,4 +32,13 @@ export class AuthService {
       })
     );
   }
+
+  getUserData(): Observable<any> {
+    const token = localStorage.getItem('token');
+    return this.http.get<any>(`${this.baseUrl}/me`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+  }
 }
