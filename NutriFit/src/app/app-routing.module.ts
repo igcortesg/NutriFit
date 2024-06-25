@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'tabs', pathMatch: 'full' },
+  { path: '', redirectTo: 'inicio-sesion', pathMatch: 'full' },
   { path: 'tabs', loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule) },
   { path: 'inicio', loadChildren: () => import('./inicio/inicio.module').then(m => m.InicioPageModule) },
   { path: 'mis-comidas', loadChildren: () => import('./mis-comidas/mis-comidas.module').then(m => m.MisComidasPageModule) },
@@ -15,6 +15,14 @@ const routes: Routes = [
   {
     path: 'nueva-actividad',
     loadChildren: () => import('./nueva-actividad/nueva-actividad.module').then( m => m.NuevaActividadPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then(m => m.RegistroPageModule)
+  },
+  {
+    path: 'inicio-sesion',
+    loadChildren: () => import('./inicio-sesion/inicio-sesion.module').then(m => m.InicioSesionPageModule)
   }
 ];
 
