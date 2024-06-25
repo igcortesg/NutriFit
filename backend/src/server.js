@@ -25,6 +25,7 @@ app.use('/api/comidas', comidasRouter);
 const actividadesRouter = require('./routes/actividades');
 app.use('/api/actividades', actividadesRouter);
 
+
 // Iniciar el servidor
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
