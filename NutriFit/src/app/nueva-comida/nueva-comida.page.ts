@@ -1,4 +1,6 @@
+// nueva-comida.page.ts
 import { Component, OnInit } from '@angular/core';
+import { ComidasService } from '../services/comidas.service';
 
 @Component({
   selector: 'app-nueva-comida',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nueva-comida.page.scss'],
 })
 export class NuevaComidaPage implements OnInit {
+  comidas: any[] = [];
 
-  constructor() { }
+  constructor(private comidasService: ComidasService) {}
 
   ngOnInit() {
+    this.comidasService.getComidas().subscribe(data => {
+      this.comidas = data;
+    });
   }
-
 }
