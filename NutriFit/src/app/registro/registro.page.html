@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">ID</ion-label>
+      <ion-input type="text" [(ngModel)]="registro.id" name="id" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="registro.contrasena" name="contrasena" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">RUT</ion-label>
+      <ion-input type="text" [(ngModel)]="registro.rut" name="rut" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="registro.email" name="email" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Altura</ion-label>
+      <ion-input type="number" [(ngModel)]="registro.altura" name="altura" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Peso</ion-label>
+      <ion-input type="number" [(ngModel)]="registro.peso" name="peso" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fecha de Nacimiento</ion-label>
+      <ion-datetime [(ngModel)]="registro.fechaNacimiento" name="fechaNacimiento" displayFormat="YYYY-MM-DD" required></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Región</ion-label>
+      <ion-input type="text" [(ngModel)]="registro.region" name="region" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Comuna</ion-label>
+      <ion-input type="text" [(ngModel)]="registro.comuna" name="comuna" required></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit">Registrarse</ion-button>
+  </form>
+</ion-content>
