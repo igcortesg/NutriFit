@@ -5,43 +5,107 @@
 </ion-header>
 
 <ion-content>
-  <form (ngSubmit)="onSubmit()">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <ion-item>
-      <ion-label position="floating">ID</ion-label>
-      <ion-input type="text" [(ngModel)]="registro.id" name="id" required></ion-input>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="name"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" [(ngModel)]="registro.contrasena" name="contrasena" required></ion-input>
-    </ion-item>
+    <div *ngIf="registerForm.controls['name'].invalid && registerForm.controls['name'].touched">
+      <ion-text color="danger">Nombre es requerido.</ion-text>
+    </div>
+
     <ion-item>
       <ion-label position="floating">RUT</ion-label>
-      <ion-input type="text" [(ngModel)]="registro.rut" name="rut" required></ion-input>
+      <ion-input formControlName="rut"></ion-input>
     </ion-item>
+    <div *ngIf="registerForm.controls['rut'].errors?.['invalidRut'] && registerForm.controls['rut'].touched">
+      <ion-text color="danger">RUT no es válido.</ion-text>
+    </div>
+    <div *ngIf="registerForm.controls['rut'].errors?.['required'] && registerForm.controls['rut'].touched">
+      <ion-text color="danger">RUT es requerido.</ion-text>
+    </div>
+
     <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email" [(ngModel)]="registro.email" name="email" required></ion-input>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input formControlName="email"></ion-input>
     </ion-item>
+    <div *ngIf="registerForm.controls['email'].errors?.['required'] && registerForm.controls['email'].touched">
+      <ion-text color="danger">Correo es requerido.</ion-text>
+    </div>
+    <div *ngIf="registerForm.controls['email'].errors?.['email'] && registerForm.controls['email'].touched">
+      <ion-text color="danger">Correo no es válido.</ion-text>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div *ngIf="registerForm.controls['password'].errors?.['required'] && registerForm.controls['password'].touched">
+      <ion-text color="danger">Contraseña es requerida.</ion-text>
+    </div>
+    <div *ngIf="registerForm.controls['password'].errors?.['minlength'] && registerForm.controls['password'].touched">
+      <ion-text color="danger">La contraseña debe tener al menos 6 caracteres.</ion-text>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <ion-input type="password" formControlName="confirmPassword"></ion-input>
+    </ion-item>
+    <div *ngIf="registerForm.errors?.['passwordMismatch'] && registerForm.controls['confirmPassword'].touched">
+      <ion-text color="danger">Las contraseñas no coinciden.</ion-text>
+    </div>
+    <div *ngIf="registerForm.controls['confirmPassword'].errors?.['required'] && registerForm.controls['confirmPassword'].touched">
+      <ion-text color="danger">Confirmar contraseña es requerida.</ion-text>
+    </div>
+
     <ion-item>
       <ion-label position="floating">Altura</ion-label>
-      <ion-input type="number" [(ngModel)]="registro.altura" name="altura" required></ion-input>
+      <ion-input type="number" formControlName="altura"></ion-input>
     </ion-item>
+    <div *ngIf="registerForm.controls['altura'].errors?.['required'] && registerForm.controls['altura'].touched">
+      <ion-text color="danger">Altura es requerida.</ion-text>
+    </div>
+
     <ion-item>
       <ion-label position="floating">Peso</ion-label>
-      <ion-input type="number" [(ngModel)]="registro.peso" name="peso" required></ion-input>
+      <ion-input type="number" formControlName="peso"></ion-input>
     </ion-item>
+    <div *ngIf="registerForm.controls['peso'].errors?.['required'] && registerForm.controls['peso'].touched">
+      <ion-text color="danger">Peso es requerido.</ion-text>
+    </div>
+
     <ion-item>
       <ion-label position="floating">Fecha de Nacimiento</ion-label>
-      <ion-datetime [(ngModel)]="registro.fechaNacimiento" name="fechaNacimiento" displayFormat="YYYY-MM-DD" required></ion-datetime>
+      <ion-datetime formControlName="fechaNacimiento" displayFormat="YYYY-MM-DD"></ion-datetime>
     </ion-item>
+    <div *ngIf="registerForm.controls['fechaNacimiento'].errors?.['required'] && registerForm.controls['fechaNacimiento'].touched">
+      <ion-text color="danger">Fecha de nacimiento es requerida.</ion-text>
+    </div>
+
     <ion-item>
       <ion-label position="floating">Región</ion-label>
-      <ion-input type="text" [(ngModel)]="registro.region" name="region" required></ion-input>
+      <ion-input formControlName="region"></ion-input>
     </ion-item>
+    <div *ngIf="registerForm.controls['region'].errors?.['required'] && registerForm.controls['region'].touched">
+      <ion-text color="danger">Región es requerida.</ion-text>
+    </div>
+
     <ion-item>
       <ion-label position="floating">Comuna</ion-label>
-      <ion-input type="text" [(ngModel)]="registro.comuna" name="comuna" required></ion-input>
+      <ion-input formControlName="comuna"></ion-input>
     </ion-item>
-    <ion-button expand="full" type="submit">Registrarse</ion-button>
+    <div *ngIf="registerForm.controls['comuna'].errors?.['required'] && registerForm.controls['comuna'].touched">
+      <ion-text color="danger">Comuna es requerida.</ion-text>
+    </div>
+
+    <ion-item>
+      <ion-checkbox formControlName="acceptTerms"></ion-checkbox>
+      <ion-label>Acepto los términos y condiciones</ion-label>
+    </ion-item>
+    <div *ngIf="registerForm.controls['acceptTerms'].invalid && registerForm.controls['acceptTerms'].touched">
+      <ion-text color="danger">Debes aceptar los términos y condiciones.</ion-text>
+    </div>
+
+    <ion-button expand="full" type="submit" [disabled]="registerForm.invalid">Registrarse</ion-button>
   </form>
 </ion-content>
