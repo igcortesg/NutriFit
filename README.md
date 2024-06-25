@@ -85,7 +85,8 @@ Actividad: En esta colección se almacenarán toda la información sobre las act
 
 Comidas: Cada usuario tiene la capacidad para registrar todas sus comidas. Para gestionar esta información, utilizaremos una colección dedicada a las comidas, esta colección contendrá el id del usuario, las calorías totales y las proteínas totales.
 
-![umlf](https://github.com/igcortesg/NutriFit/assets/56361998/96070704-d688-4d85-9fc6-972396118aaf)
+![db](https://github.com/igcortesg/NutriFit/assets/56361998/af940205-4db7-4966-8c45-bb1548216259)
+
 
 
 ## Patrones de diseño
